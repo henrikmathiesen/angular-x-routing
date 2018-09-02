@@ -4,6 +4,7 @@ import { SharedModule } from 'app/shared/shared.module';
 import { OtherRoutingModule } from './other-routing.module';
 import { OtherComponent } from './other.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
+import { ButtonAsRadiosComponent } from './buttons-as-radios/buttons-as-radios.component';
 
 @NgModule({
     imports: [
@@ -12,7 +13,8 @@ import { TooltipComponent } from './tooltip/tooltip.component';
     ],
     declarations: [
         OtherComponent,
-        TooltipComponent
+        TooltipComponent,
+        ButtonAsRadiosComponent
     ]
 })
 export class OtherModule { }

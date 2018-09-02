@@ -104,7 +104,7 @@ export class ProductEditComponent implements OnInit, OnDestroy {
   }
 
   isValid(path?: string) {
-    if(!this.product) {
+    if (!this.product) {
       return false;
     }
 
@@ -113,7 +113,7 @@ export class ProductEditComponent implements OnInit, OnDestroy {
     if (path) {
       return this.dataIsValid[path];
     }
-    
+
     return (this.dataIsValid && Object.keys(this.dataIsValid).every(d => this.dataIsValid[d] === true));
   }
 
@@ -121,7 +121,7 @@ export class ProductEditComponent implements OnInit, OnDestroy {
 
     // Manual validation
     // This component and its children (product-edit-info and product-edit-tags) gets the same instance
-    // So it doesnt matter that the child components and their form validation state is destroyed, 
+    // So it doesnt matter that the child components and their form validation state is destroyed,
     // we still have access to the product instance here.
 
     // Clear the validation object

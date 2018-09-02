@@ -71,6 +71,8 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 }
 
+/* tslint:disable */
+
 /* 
 
   When injecting authService public and use it in template like this: <li *ngIf="!authService.isLoggedIn()">

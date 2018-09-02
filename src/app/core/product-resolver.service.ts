@@ -49,7 +49,7 @@ export class ProductResolverService implements Resolve<ProductModel> {
 
                 return this.handleError(`Product with id ${id} was not found`);
             })
-            .catch((error) => { 
+            .catch((error) => {
                 return this.handleError(error);
             });
     }

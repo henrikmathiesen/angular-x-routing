@@ -37,7 +37,7 @@ export class ProductEditInfoComponent implements OnInit, OnDestroy {
     });
   }
 
-  ngOnDestroy() { 
+  ngOnDestroy() {
     this.activatedRouteSubscription.unsubscribe();
   }
 

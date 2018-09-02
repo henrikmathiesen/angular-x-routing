@@ -61,6 +61,8 @@ const routes: Routes = [
 ];
 
 
+/* tslint:disable */
+
 /*
  
   VERSION 2

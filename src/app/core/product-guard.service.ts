@@ -14,4 +14,4 @@ export class ProductGuardService implements CanDeactivate<ProductEditComponent> 
 
         return true;
     }
-} 
+}
