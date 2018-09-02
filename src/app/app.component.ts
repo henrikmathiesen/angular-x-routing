@@ -46,7 +46,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.router.events
       .filter(event => event instanceof NavigationEnd)
       .subscribe(event => {
-        console.log(event);
+        // console.log(event);
       });
 
     this.userSubscription = this.authService.user$.subscribe(user => this.user = user);
