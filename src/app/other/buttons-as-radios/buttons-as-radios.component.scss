@@ -1,0 +1,8 @@
+@import 'app-component-dependencies';
+
+.app-btn-group-toggle {
+    label.active {
+        background-color: $primary;
+        border-color: $primary;
+    }
+}

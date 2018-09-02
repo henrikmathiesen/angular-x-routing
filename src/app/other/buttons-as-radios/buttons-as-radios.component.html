@@ -1,6 +1,32 @@
 <div class="row">
     <div class="col">
         <h2>{{ pageTitle }}</h2>
+
+        <h3>Default</h3>
+        <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="someFormModel.operatingSystemOption">
+            <label ngbButtonLabel class="btn-primary">
+                <input ngbButton type="radio" [value]="operatingSystemConstant.windows"> Windows
+            </label>
+            <label ngbButtonLabel class="btn-primary">
+                <input ngbButton type="radio" [value]="operatingSystemConstant.macOs"> Mac OS
+            </label>
+            <label ngbButtonLabel class="btn-primary">
+                <input ngbButton type="radio" [value]="operatingSystemConstant.linux"> Linux
+            </label>
+        </div>
+        <hr>
+        <h3>Toggle Classes</h3>
+        <div class="btn-group btn-group-toggle app-btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="someFormModel.operatingSystemOption">
+            <label ngbButtonLabel [ngClass]="{'btn-secondary': someFormModel.operatingSystemOption !== operatingSystemConstant.windows, 'btn-primary': someFormModel.operatingSystemOption === operatingSystemConstant.windows }">
+                <input ngbButton type="radio" [value]="operatingSystemConstant.windows"> Windows
+            </label>
+            <label ngbButtonLabel [ngClass]="{'btn-secondary': someFormModel.operatingSystemOption !== operatingSystemConstant.macOs, 'btn-primary': someFormModel.operatingSystemOption === operatingSystemConstant.macOs }">
+                <input ngbButton type="radio" [value]="operatingSystemConstant.macOs"> Mac OS
+            </label>
+            <label ngbButtonLabel [ngClass]="{'btn-secondary': someFormModel.operatingSystemOption !== operatingSystemConstant.linux, 'btn-primary': someFormModel.operatingSystemOption === operatingSystemConstant.linux }">
+                <input ngbButton type="radio" [value]="operatingSystemConstant.linux"> Linux
+            </label>
+        </div>
         <hr>
         <button type="button" (click)="logResult()">Log result</button>
     </div>
