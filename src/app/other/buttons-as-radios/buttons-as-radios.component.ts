@@ -12,7 +12,7 @@ export class ButtonAsRadiosComponent {
     operatingSystemConstant = OperatingSystemConstant;
     someFormModel: SomeFormModel = {
         operatingSystemOption: null
-    }
+    };
 
     logResult() {
         console.log(this.someFormModel);

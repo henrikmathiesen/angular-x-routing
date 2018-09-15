@@ -7,6 +7,7 @@ import { OtherRoutingModule } from './other-routing.module';
 import { OtherComponent } from './other.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { ButtonAsRadiosComponent } from './buttons-as-radios/buttons-as-radios.component';
+import { SliderNativeComponent } from './slider-native/slider-native.component';
 
 @NgModule({
     imports: [
@@ -18,7 +19,8 @@ import { ButtonAsRadiosComponent } from './buttons-as-radios/buttons-as-radios.c
     declarations: [
         OtherComponent,
         TooltipComponent,
-        ButtonAsRadiosComponent
+        ButtonAsRadiosComponent,
+        SliderNativeComponent
     ]
 })
 export class OtherModule { }

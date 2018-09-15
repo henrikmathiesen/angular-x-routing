@@ -3,7 +3,7 @@
 
 $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 
-// Gutter
+// Gutter (px, use with app-remy() in _app-mixins)
 $app-gutter-xs: 5;
 $app-gutter-sm: 10;
 $app-gutter-md: 15;

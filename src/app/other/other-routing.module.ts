@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { OtherComponent } from './other.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { ButtonAsRadiosComponent } from './buttons-as-radios/buttons-as-radios.component';
+import { SliderNativeComponent } from './slider-native/slider-native.component';
 
 const routes: Routes = [
     {
@@ -17,6 +18,10 @@ const routes: Routes = [
     {
         path: 'other/buttons-as-radios',
         component: ButtonAsRadiosComponent
+    },
+    {
+        path: 'other/slider-native',
+        component: SliderNativeComponent
     }
 ];
 
