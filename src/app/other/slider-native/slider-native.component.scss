@@ -37,27 +37,27 @@ $thumb-d: 2.0em;
     font: 1em/1 arial, sans-serif;
     
     &::-webkit-slider-runnable-track {
-        @include track()
+        @include track();
     }
 
     &::-moz-range-track { 
-        @include track() 
+        @include track();
     }
 
     &::-ms-track { 
-        @include track() 
+        @include track();
     }
     
     &::-webkit-slider-thumb {
         margin-top: .5*($track-h - $thumb-d);
-        @include thumb()
+        @include thumb();
     }
     &::-moz-range-thumb { 
-        @include thumb() 
+        @include thumb();
     }
     &::-ms-thumb {
         margin-top: 0;
-        @include thumb()
+        @include thumb();
     }
     
     &::-ms-tooltip { display: none }
