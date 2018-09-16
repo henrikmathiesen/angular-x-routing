@@ -4,7 +4,7 @@
 
 $track-w: 100%; // 12.5em;
 $track-h: .25em;
-$thumb-d: 1.5em;
+$thumb-d: 2.0em;
 
 @mixin track() {
     box-sizing: border-box;
@@ -30,7 +30,7 @@ $thumb-d: 1.5em;
     
     margin: 0;
     padding: 0;
-    margin-top: app-remy(6);
+    margin-top: app-remy(5);
     width: $track-w; 
     height: $thumb-d;
     background: transparent;
@@ -50,12 +50,14 @@ $thumb-d: 1.5em;
     
     &::-webkit-slider-thumb {
         margin-top: .5*($track-h - $thumb-d);
-        @include thumb
+        @include thumb()
     }
-    &::-moz-range-thumb { @include thumb }
+    &::-moz-range-thumb { 
+        @include thumb() 
+    }
     &::-ms-thumb {
         margin-top: 0;
-        @include thumb
+        @include thumb()
     }
     
     &::-ms-tooltip { display: none }
