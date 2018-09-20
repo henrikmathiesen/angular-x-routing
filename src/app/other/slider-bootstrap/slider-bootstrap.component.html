@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col">
+        <h2>{{ pageTitle }}</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <input type="range" class="custom-range" [(ngModel)]="gift" [min]="0" [max]="100" [step]="10">
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control" [(ngModel)]="gift">
+            </div>
+        </div>
+    </div>
+</div>

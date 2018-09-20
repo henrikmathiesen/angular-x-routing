@@ -8,6 +8,7 @@ import { OtherComponent } from './other.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { ButtonAsRadiosComponent } from './buttons-as-radios/buttons-as-radios.component';
 import { SliderNativeComponent } from './slider-native/slider-native.component';
+import { SliderBootstrapComponent } from './slider-bootstrap/slider-bootstrap.component';
 
 @NgModule({
     imports: [
@@ -20,7 +21,8 @@ import { SliderNativeComponent } from './slider-native/slider-native.component';
         OtherComponent,
         TooltipComponent,
         ButtonAsRadiosComponent,
-        SliderNativeComponent
+        SliderNativeComponent,
+        SliderBootstrapComponent
     ]
 })
 export class OtherModule { }
