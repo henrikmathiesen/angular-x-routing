@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbButtonsModule, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +18,11 @@ import { Page404Component } from './page-404/page-404.component';
   imports: [
     BrowserModule,
     CoreModule,
+
+    // Need to do this in version <6 of Angular so bootstraps services that are associated with the widget are registrered with an injector (in this case root injector)
+    NgbButtonsModule.forRoot(),
+    NgbDatepickerModule.forRoot(),
+
     MessagesModule,
     // ProductModule, commented out since we are going to lazy load this module
     UserModule,

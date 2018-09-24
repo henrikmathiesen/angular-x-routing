@@ -6,6 +6,7 @@ import { TooltipComponent } from './tooltip/tooltip.component';
 import { ButtonAsRadiosComponent } from './buttons-as-radios/buttons-as-radios.component';
 import { SliderNativeComponent } from './slider-native/slider-native.component';
 import { SliderBootstrapComponent } from './slider-bootstrap/slider-bootstrap.component';
+import { DatepickerBootstrapComponent } from './datepicker-bootstrap/datepicker-bootstrap.component';
 
 const routes: Routes = [
     {
@@ -27,6 +28,10 @@ const routes: Routes = [
     {
         path: 'other/slider-bootstrap',
         component: SliderBootstrapComponent
+    },
+    {
+        path: 'other/datepicker-bootstrap',
+        component: DatepickerBootstrapComponent
     }
 ];
 

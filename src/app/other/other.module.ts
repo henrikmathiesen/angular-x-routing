@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { NgbButtonsModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbButtonsModule, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { SharedModule } from 'app/shared/shared.module';
 import { OtherRoutingModule } from './other-routing.module';
@@ -9,11 +9,13 @@ import { TooltipComponent } from './tooltip/tooltip.component';
 import { ButtonAsRadiosComponent } from './buttons-as-radios/buttons-as-radios.component';
 import { SliderNativeComponent } from './slider-native/slider-native.component';
 import { SliderBootstrapComponent } from './slider-bootstrap/slider-bootstrap.component';
+import { DatepickerBootstrapComponent } from './datepicker-bootstrap/datepicker-bootstrap.component';
 
 @NgModule({
     imports: [
         FormsModule,
         NgbButtonsModule,
+        NgbDatepickerModule,
         SharedModule,
         OtherRoutingModule
     ],
@@ -22,7 +24,8 @@ import { SliderBootstrapComponent } from './slider-bootstrap/slider-bootstrap.co
         TooltipComponent,
         ButtonAsRadiosComponent,
         SliderNativeComponent,
-        SliderBootstrapComponent
+        SliderBootstrapComponent,
+        DatepickerBootstrapComponent
     ]
 })
 export class OtherModule { }
