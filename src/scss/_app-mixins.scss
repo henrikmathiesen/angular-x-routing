@@ -18,3 +18,8 @@
 @function app-remy($px) {
     @return ($px/16) * 1rem;
 }
+
+@function app-better-remy($size) { 
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}

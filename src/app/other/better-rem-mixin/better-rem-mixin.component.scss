@@ -1,0 +1,9 @@
+@import 'app-component-dependencies';
+
+.app-remy {
+    font-size: app-remy(16);
+}
+
+.app-better-remy {
+    font-size: app-better-remy(32px);
+}

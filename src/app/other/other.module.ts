@@ -10,6 +10,7 @@ import { ButtonAsRadiosComponent } from './buttons-as-radios/buttons-as-radios.c
 import { SliderNativeComponent } from './slider-native/slider-native.component';
 import { SliderBootstrapComponent } from './slider-bootstrap/slider-bootstrap.component';
 import { DatepickerBootstrapComponent } from './datepicker-bootstrap/datepicker-bootstrap.component';
+import { BetterRemMixinComponent } from './better-rem-mixin/better-rem-mixin.component';
 
 @NgModule({
     imports: [
@@ -25,7 +26,8 @@ import { DatepickerBootstrapComponent } from './datepicker-bootstrap/datepicker-
         ButtonAsRadiosComponent,
         SliderNativeComponent,
         SliderBootstrapComponent,
-        DatepickerBootstrapComponent
+        DatepickerBootstrapComponent,
+        BetterRemMixinComponent
     ]
 })
 export class OtherModule { }

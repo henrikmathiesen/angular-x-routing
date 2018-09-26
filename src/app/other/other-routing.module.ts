@@ -7,6 +7,7 @@ import { ButtonAsRadiosComponent } from './buttons-as-radios/buttons-as-radios.c
 import { SliderNativeComponent } from './slider-native/slider-native.component';
 import { SliderBootstrapComponent } from './slider-bootstrap/slider-bootstrap.component';
 import { DatepickerBootstrapComponent } from './datepicker-bootstrap/datepicker-bootstrap.component';
+import { BetterRemMixinComponent } from './better-rem-mixin/better-rem-mixin.component';
 
 const routes: Routes = [
     {
@@ -32,6 +33,10 @@ const routes: Routes = [
     {
         path: 'other/datepicker-bootstrap',
         component: DatepickerBootstrapComponent
+    },
+    {
+        path: 'other/better-rem-mixin',
+        component: BetterRemMixinComponent
     }
 ];
 
