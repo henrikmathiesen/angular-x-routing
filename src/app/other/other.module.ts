@@ -11,6 +11,7 @@ import { SliderNativeComponent } from './slider-native/slider-native.component';
 import { SliderBootstrapComponent } from './slider-bootstrap/slider-bootstrap.component';
 import { DatepickerBootstrapComponent } from './datepicker-bootstrap/datepicker-bootstrap.component';
 import { BetterRemMixinComponent } from './better-rem-mixin/better-rem-mixin.component';
+import { AnimationComponent } from './animation/animation.component';
 
 @NgModule({
     imports: [
@@ -27,7 +28,8 @@ import { BetterRemMixinComponent } from './better-rem-mixin/better-rem-mixin.com
         SliderNativeComponent,
         SliderBootstrapComponent,
         DatepickerBootstrapComponent,
-        BetterRemMixinComponent
+        BetterRemMixinComponent,
+        AnimationComponent
     ]
 })
 export class OtherModule { }
