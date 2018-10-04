@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbButtonsModule, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { SharedModule } from 'app/shared/shared.module';
@@ -16,6 +17,7 @@ import { AnimationComponent } from './animation/animation.component';
 @NgModule({
     imports: [
         FormsModule,
+        BrowserAnimationsModule,
         NgbButtonsModule,
         NgbDatepickerModule,
         SharedModule,
