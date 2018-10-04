@@ -9,6 +9,7 @@ import {
 
 @Component({
     templateUrl: './animation.component.html',
+    // https://angular.io/guide/animations
     animations: [
         trigger('openClose', [
             state('open', style({
