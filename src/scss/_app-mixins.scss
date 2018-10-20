@@ -1,3 +1,6 @@
+// Actually these two breakpoints, and more, are included in Bootstrap 4
+// https://getbootstrap.com/docs/4.1/layout/overview/#responsive-breakpoints
+
 @mixin app-mq-breakpoint-up($breakpoint) {
     $breakpoint: map-get($app-breakpoints, $breakpoint);
     
