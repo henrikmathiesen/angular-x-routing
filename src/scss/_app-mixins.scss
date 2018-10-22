@@ -27,3 +27,7 @@
   $remSize: $size / 16px;
   @return #{$remSize}rem;
 }
+
+@function app-remmy-no-unit($size){
+  @return $size / 16;
+}
