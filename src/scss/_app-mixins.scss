@@ -18,16 +18,18 @@
   }
 }
 
+// send in (n)
 @function app-remy($px) {
     @return ($px/16) * 1rem;
 }
 
 // http://www.stubbornella.org/content/2013/07/01/easy-peasy-rem-conversion-with-sass/
+// send in (npx)
 @function app-better-remy($size) { 
   $remSize: $size / 16px;
   @return #{$remSize}rem;
 }
 
-@function app-remmy-no-unit($size){
+@function app-remy-no-unit($size){
   @return $size / 16;
 }
