@@ -9,6 +9,7 @@ import { SliderBootstrapComponent } from './slider-bootstrap/slider-bootstrap.co
 import { DatepickerBootstrapComponent } from './datepicker-bootstrap/datepicker-bootstrap.component';
 import { BetterRemMixinComponent } from './better-rem-mixin/better-rem-mixin.component';
 import { AnimationComponent } from './animation/animation.component';
+import { BetterImportsComponent } from './better-imports/better-imports.component';
 
 const routes: Routes = [
     {
@@ -42,6 +43,10 @@ const routes: Routes = [
     {
         path: 'other/animation',
         component: AnimationComponent
+    },
+    {
+        path: 'other/better-imports',
+        component: BetterImportsComponent
     }
 ];
 
