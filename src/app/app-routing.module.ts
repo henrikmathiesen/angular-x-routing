@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
+import { Topic01Component } from './empty-parent-route/topic01/topic01.component';
 import { Page404Component } from './page-404/page-404.component';
 import { AuthGuardService } from 'app/core/auth-guard.service';
 
@@ -18,6 +19,21 @@ const routes: Routes = [
     loadChildren: 'app/product/product.module#ProductModule',
     // canActivate: [AuthGuardService]
     canLoad: [AuthGuardService]
+  },
+  {
+    // See other-routing.module for empty component less parent route in another module (commented out)
+    path: 'empty-parent-route',
+    children: [
+      {
+        path: '',
+        redirectTo: 'topic01',
+        pathMatch: 'full'
+      },
+      {
+        path: 'topic01',
+        component: Topic01Component
+      }
+    ]
   },
   {
     path: '',

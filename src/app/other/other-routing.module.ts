@@ -16,6 +16,9 @@ const routes: Routes = [
         path: 'other',
         component: OtherComponent,
     },
+
+    // We could have probably used children[] under 'other' for these
+
     {
         path: 'other/tooltip',
         component: TooltipComponent
@@ -47,7 +50,24 @@ const routes: Routes = [
     {
         path: 'other/better-imports',
         component: BetterImportsComponent
-    }
+    },
+
+    // ---------------------------------------------------------------
+
+    // {
+    //     path: 'other-empty-parent-route',
+    //     children: [
+    //         {
+    //             path: '',
+    //             redirectTo: 'topic01',
+    //             pathMatch: 'full'
+    //         },
+    //         {
+    //             path: 'topic01',
+    //             component: Topic01Component
+    //         }
+    //     ]
+    // }
 ];
 
 @NgModule({

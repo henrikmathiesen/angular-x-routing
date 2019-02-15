@@ -11,6 +11,7 @@ import { OtherModule } from './other/other.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { Topic01Component } from './empty-parent-route/topic01/topic01.component';
 import { Page404Component } from './page-404/page-404.component';
 
 
@@ -32,6 +33,7 @@ import { Page404Component } from './page-404/page-404.component';
   declarations: [
     AppComponent,
     HomeComponent,
+    Topic01Component,
     Page404Component
   ],
   bootstrap: [AppComponent]
