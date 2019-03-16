@@ -11,6 +11,8 @@ import { BetterRemMixinComponent } from './better-rem-mixin/better-rem-mixin.com
 import { AnimationComponent } from './animation/animation.component';
 import { BetterImportsComponent } from './better-imports/better-imports.component';
 
+import { ResolveWithLoaderComponent, Step1Component, Step2Component } from './resolve-with-loader';
+
 const routes: Routes = [
     {
         path: 'other',
@@ -49,7 +51,7 @@ const routes: Routes = [
         //     {
         //         path: 'better-imports',
         //         component: BetterImportsComponent
-        //     },        
+        //     },
         // ]
 
         //#endregion
@@ -91,6 +93,26 @@ const routes: Routes = [
         path: 'other/better-imports',
         component: BetterImportsComponent
     },
+    {
+        path: 'other/resolve-with-loader',
+        component: ResolveWithLoaderComponent,
+        children: [
+            {
+                path: '',
+                redirectTo: 'step1',
+                pathMatch: 'full'
+            },
+            {
+                path: 'step1',
+                component: Step1Component
+            },
+            {
+                path: 'step2',
+                component: Step2Component,
+                // resolve: TODO...
+            },
+        ]
+    }
 
     // ---------------------------------------------------------------
 

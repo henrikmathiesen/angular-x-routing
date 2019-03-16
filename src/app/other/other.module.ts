@@ -15,6 +15,8 @@ import { BetterRemMixinComponent } from './better-rem-mixin/better-rem-mixin.com
 import { AnimationComponent } from './animation/animation.component';
 import { BetterImportsComponent } from './better-imports/better-imports.component';
 
+import { ResolveWithLoaderComponent, Step1Component, Step2Component } from './resolve-with-loader';
+
 @NgModule({
     imports: [
         FormsModule,
@@ -33,7 +35,11 @@ import { BetterImportsComponent } from './better-imports/better-imports.componen
         DatepickerBootstrapComponent,
         BetterRemMixinComponent,
         AnimationComponent,
-        BetterImportsComponent
+        BetterImportsComponent,
+
+        ResolveWithLoaderComponent,
+        Step1Component,
+        Step2Component
     ]
 })
 export class OtherModule { }
