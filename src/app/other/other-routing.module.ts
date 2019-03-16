@@ -15,9 +15,49 @@ const routes: Routes = [
     {
         path: 'other',
         component: OtherComponent,
+
+        //#region other sub routes as children
+        // children: [
+        //     {
+        //         path: 'tooltip',
+        //         component: TooltipComponent
+        //     },
+        //     {
+        //         path: 'buttons-as-radios',
+        //         component: ButtonAsRadiosComponent
+        //     },
+        //     {
+        //         path: 'slider-native',
+        //         component: SliderNativeComponent
+        //     },
+        //     {
+        //         path: 'slider-bootstrap',
+        //         component: SliderBootstrapComponent
+        //     },
+        //     {
+        //         path: 'datepicker-bootstrap',
+        //         component: DatepickerBootstrapComponent
+        //     },
+        //     {
+        //         path: 'better-rem-mixin',
+        //         component: BetterRemMixinComponent
+        //     },
+        //     {
+        //         path: 'animation',
+        //         component: AnimationComponent
+        //     },
+        //     {
+        //         path: 'better-imports',
+        //         component: BetterImportsComponent
+        //     },        
+        // ]
+
+        //#endregion
     },
 
-    // We could have probably used children[] under 'other' for these
+    // We could have probably used children[] under 'other' for these.
+    // Well. It requires a router outlet on other.component.html and
+    // then we dont have the desired design.
 
     {
         path: 'other/tooltip',
