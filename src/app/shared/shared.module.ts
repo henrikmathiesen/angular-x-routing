@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StarComponent } from './star/star.component';
 import { TipsComponent } from './tips/tips.component';
-import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   imports: [
@@ -11,13 +10,11 @@ import { LoaderComponent } from './loader/loader.component';
   exports: [
     CommonModule,
     StarComponent,
-    TipsComponent,
-    LoaderComponent
+    TipsComponent
   ],
   declarations: [
     StarComponent,
-    TipsComponent,
-    LoaderComponent
+    TipsComponent
   ]
 })
 export class SharedModule { }
