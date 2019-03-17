@@ -13,6 +13,8 @@ import { BetterImportsComponent } from './better-imports/better-imports.componen
 
 import { ResolveWithLoaderComponent, Step1Component, Step2Component } from './resolve-with-loader';
 
+import { Step2ResolverService } from 'app/core/step2-resolver.service';
+
 const routes: Routes = [
     {
         path: 'other',
@@ -109,7 +111,9 @@ const routes: Routes = [
             {
                 path: 'step2',
                 component: Step2Component,
-                // resolve: TODO...
+                resolve: {
+                    num: Step2ResolverService
+                }
             },
         ]
     }

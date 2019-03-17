@@ -12,11 +12,11 @@ export class ResolveWithLoaderComponent {
         private router: Router,
         private activatedRoute: ActivatedRoute) { }
 
-    onPrev() { 
+    onPrev() {
         this.router.navigate(['step1'], { relativeTo: this.activatedRoute });
     }
 
-    onNext() { 
+    onNext() {
         this.router.navigate(['step2'], { relativeTo: this.activatedRoute });
     }
 

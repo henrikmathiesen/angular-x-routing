@@ -8,6 +8,7 @@ import { ProductResolverService } from './product-resolver.service';
 import { AuthGuardService } from './auth-guard.service';
 import { LoadingComponent } from './loading/loading.component';
 import { ProductGuardService } from './product-guard.service';
+import { Step2ResolverService } from './step2-resolver.service';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { ProductGuardService } from './product-guard.service';
     AuthService,
     ProductResolverService,
     AuthGuardService,
-    ProductGuardService
+    ProductGuardService,
+    Step2ResolverService
   ],
   declarations: [
     LoadingComponent
