@@ -1,4 +1,4 @@
-import { Component, HostBinding } from '@angular/core';
+import { Component } from '@angular/core';
 import {
     trigger,
     state,
@@ -39,3 +39,25 @@ export class AnimationComponent {
         this.isOpen = !this.isOpen;
     }
 }
+
+/*
+
+animations: [
+        trigger('pulse', [
+            transition(':enter', [
+                animate(
+                    500,
+                    keyframes([
+                        style({ transform: 'scale3d(1.0, 1.0, 1.0)', offset: 0 }),
+                        style({ transform: 'scale3d(1.05, 1.05, 1.05)', offset: 0.5 }),
+                        style({ transform: 'scale3d(1.0, 1.0, 1.0)', offset: 1 })
+                    ])
+                )
+            ])
+        ])
+    ]
+	
+	
+	<div class="row" [@pulse]></div>
+
+*/
