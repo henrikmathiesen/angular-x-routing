@@ -10,6 +10,7 @@ import { DatepickerBootstrapComponent } from './datepicker-bootstrap/datepicker-
 import { BetterRemMixinComponent } from './better-rem-mixin/better-rem-mixin.component';
 import { AnimationComponent } from './animation/animation.component';
 import { BetterImportsComponent } from './better-imports/better-imports.component';
+import { LinksComponent } from './links/links.component';
 
 import { ResolveWithLoaderComponent, Step1Component, Step2Component } from './resolve-with-loader';
 
@@ -94,6 +95,10 @@ const routes: Routes = [
     {
         path: 'other/better-imports',
         component: BetterImportsComponent
+    },
+    {
+        path: 'other/links',
+        component: LinksComponent
     },
     {
         path: 'other/resolve-with-loader',
