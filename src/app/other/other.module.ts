@@ -14,9 +14,8 @@ import { DatepickerBootstrapComponent } from './datepicker-bootstrap/datepicker-
 import { BetterRemMixinComponent } from './better-rem-mixin/better-rem-mixin.component';
 import { AnimationComponent } from './animation/animation.component';
 import { BetterImportsComponent } from './better-imports/better-imports.component';
-import { LinksComponent } from './links/links.component';
-
 import { ResolveWithLoaderComponent, Step1Component, Step2Component } from './resolve-with-loader';
+import { LinksComponent } from './links/links.component';
 
 @NgModule({
     imports: [
@@ -37,11 +36,12 @@ import { ResolveWithLoaderComponent, Step1Component, Step2Component } from './re
         BetterRemMixinComponent,
         AnimationComponent,
         BetterImportsComponent,
-        LinksComponent,
-
+        
         ResolveWithLoaderComponent,
         Step1Component,
-        Step2Component
+        Step2Component,
+        
+        LinksComponent,
     ]
 })
 export class OtherModule { }
