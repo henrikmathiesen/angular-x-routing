@@ -56,8 +56,8 @@ animations: [
             ])
         ])
     ]
-	
-	
+
+
 	<div class="row" [@pulse]></div>
 
 */
