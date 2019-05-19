@@ -1,5 +1,27 @@
 <div class="row">
     <div class="col">
         <h2>{{ pageTitle }}</h2>
+        <div>
+            <ul>
+                <li>
+                    <a routerLink="/other/tooltip">Link to another Other part</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/other', 'tooltip']">Link to another Other part</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/products', productId, 'edit']">Link to edit product with an id</a>
+                </li>
+                <li>
+                    <button class="btn btn-primary btn-sm" (click)="onGoToOtherOne()">Link to another Other part</button>
+                </li>
+                <li>
+                    <button class="btn btn-primary btn-sm mt-1" (click)="onGoToOtherTwo()">Link to another Other part</button>
+                </li>
+                <li>
+                    <button class="btn btn-primary btn-sm mt-1" (click)="onGotoProductWithId()">Link to edit product with an id</button>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
