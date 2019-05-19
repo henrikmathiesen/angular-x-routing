@@ -9,10 +9,6 @@ export class LinksComponent {
     pageTitle = 'Links';
     productId = 2;
 
-    // TODO: Link from here to products and from products to here. From code and from template.
-    // And to other/resolve-with-loader
-
-
     constructor(
         private router: Router
     ) { }
