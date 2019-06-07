@@ -10,5 +10,10 @@
             <button type="button" class="btn btn-default" (click)="onPrev()">Prev</button>
             <button type="button" class="btn btn-default" (click)="onNext()">Next</button>
         </div>
+        <div class="mt-4">
+            <h3>Via links instead</h3>
+            <!-- Relative to route (automatic, no need to use this.activatedRoute, compare with "code behind") -->
+            <a routerLink="step2">Next</a>
+        </div>
     </div>
 </div>
