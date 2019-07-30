@@ -11,6 +11,7 @@ import { BetterRemMixinComponent } from './better-rem-mixin/better-rem-mixin.com
 import { AnimationComponent } from './animation/animation.component';
 import { BetterImportsComponent } from './better-imports/better-imports.component';
 import { LinksComponent } from './links/links.component';
+import { RatingBootstrapComponent } from './rating-bootstrap/rating-bootstrap.component';
 
 import { ResolveWithLoaderComponent, Step1Component, Step2Component } from './resolve-with-loader';
 
@@ -99,6 +100,10 @@ const routes: Routes = [
     {
         path: 'other/links',
         component: LinksComponent
+    },
+    {
+        path: 'other/rating-bootstrap',
+        component: RatingBootstrapComponent
     },
     {
         path: 'other/resolve-with-loader',

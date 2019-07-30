@@ -16,6 +16,7 @@ import { AnimationComponent } from './animation/animation.component';
 import { BetterImportsComponent } from './better-imports/better-imports.component';
 import { ResolveWithLoaderComponent, Step1Component, Step2Component } from './resolve-with-loader';
 import { LinksComponent } from './links/links.component';
+import { RatingBootstrapComponent } from './rating-bootstrap/rating-bootstrap.component';
 
 @NgModule({
     imports: [
@@ -37,12 +38,13 @@ import { LinksComponent } from './links/links.component';
         BetterRemMixinComponent,
         AnimationComponent,
         BetterImportsComponent,
-        
+
         ResolveWithLoaderComponent,
         Step1Component,
         Step2Component,
-        
+
         LinksComponent,
+        RatingBootstrapComponent
     ]
 })
 export class OtherModule { }

@@ -17,7 +17,7 @@ export class LinksComponent {
         this.router.navigateByUrl('/other/tooltip');
     }
 
-    onGoToOtherTwo() { 
+    onGoToOtherTwo() {
         this.router.navigate(['/other', 'tooltip']);
     }
 
