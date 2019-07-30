@@ -12,6 +12,8 @@ export class ResolveWithLoaderComponent {
         private router: Router,
         private activatedRoute: ActivatedRoute) { }
 
+    // loading.component is in core
+
     onPrev() {
         this.router.navigate(['step1'], { relativeTo: this.activatedRoute });
     }
