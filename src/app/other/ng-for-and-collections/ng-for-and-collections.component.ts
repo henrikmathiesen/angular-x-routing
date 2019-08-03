@@ -67,6 +67,8 @@ export class NgForAndCollectionsComponent implements OnInit {
         this.getCollectionAndPopulateProperty();
         this.getCollectionPopulatePropertyNotDefined();
         this.getCollectionAndReturnObservableForAsyncPipe();
+
+        this.getFriendsName();
     }
 
     getTodos() {
@@ -104,6 +106,30 @@ export class NgForAndCollectionsComponent implements OnInit {
 
     private getCollectionAndReturnObservableForAsyncPipe() {
         this.todosObs$ = this.http.get<Todo[]>('http://jsonplaceholder.typicode.com/todos');
+    }
+
+    private getFriendsName() {
+        const friends = this.people.map(v => v.friends);
+
+        console.log('friends');
+        console.log(friends);
+        console.log('/friends');
+
+        const friendsNames: string[] = [];
+
+        for (let i = 0; i < friends.length; i++) {
+
+            for (let j = 0; j < friends[i].length; j++) {
+
+                friendsNames.push(friends[i][j].name);
+
+            }
+
+        }
+
+        console.log('friends with names');
+        console.log(friendsNames);          // ['Adams 1', 'Adams 2', 'Bertils 1', 'Bertils 2']
+        console.log('/friends with names');
     }
 
 }
