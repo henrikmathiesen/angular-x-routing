@@ -2,7 +2,25 @@
     <div class="col">
         <h2>{{ pageTitle }}</h2>
         <div>
-            
+            <h3>Nested ngFor</h3>
+            <ul>
+                <li *ngFor="let p of people">
+                    <span class="d-block">{{ p.name }}, {{ p.age }}</span>
+                    <ul>
+                        <li *ngFor="let f of p.friends">
+                            {{ f.name }}, {{ f.age }}
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
+
+
+
+<!--
+
+    Observable also
+
+-->
