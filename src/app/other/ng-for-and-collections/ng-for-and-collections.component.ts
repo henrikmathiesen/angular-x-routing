@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { filter } from 'rxjs/operators';
 
 interface Person {
     name: string;
@@ -54,6 +56,8 @@ export class NgForAndCollectionsComponent implements OnInit {
 
     todos: Todo[];
     getMoreTodos: Todo[];
+    todosPropertyNotDefined: any;
+    todosObs$: Observable<Todo[]>;
 
     constructor(
         private http: HttpClient
@@ -61,9 +65,11 @@ export class NgForAndCollectionsComponent implements OnInit {
 
     ngOnInit() {
         this.getCollectionAndPopulateProperty();
+        this.getCollectionPopulatePropertyNotDefined();
+        this.getCollectionAndReturnObservableForAsyncPipe();
     }
 
-    getTodos() { 
+    getTodos() {
         this.http.get('http://jsonplaceholder.typicode.com/todos')
             .subscribe(
                 (v: Todo[]) => {
@@ -85,8 +91,19 @@ export class NgForAndCollectionsComponent implements OnInit {
             )
     }
 
-    private getCollectionAndReturnObservableForAsyncPipe() {
+    private getCollectionPopulatePropertyNotDefined() {
+        this.http.get('http://jsonplaceholder.typicode.com/todos')
+            .subscribe(
+                (v: Todo[]) => {
+                    const tenTodos = v.slice(0, 10);
+                    this.todosPropertyNotDefined = { todos: tenTodos };
+                },
+                e => console.log(e)
+            )
+    }
 
+    private getCollectionAndReturnObservableForAsyncPipe() {
+        this.todosObs$ = this.http.get<Todo[]>('http://jsonplaceholder.typicode.com/todos');
     }
 
 }

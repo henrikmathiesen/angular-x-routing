@@ -31,6 +31,20 @@
                 <li *ngFor="let t of getMoreTodos">{{ t.id }}</li>
             </ul>
         </div>
+        <hr>
+        <div>
+            <h3>Async when property is not defined</h3>
+            <ul> <!-- *ngIf="todosPropertyNotDefined" or let t of todosPropertyNotDefined?.todos (question mark) -->
+                <li *ngFor="let t of todosPropertyNotDefined?.todos">{{ t.title }}</li>
+            </ul>
+        </div>
+        <hr>
+        <div>
+            <h3>Async pipe</h3>
+            <ul>
+                <li *ngFor="let t of todosObs$ | async | slice: 0:10">{{ t.id }}</li>
+            </ul>
+        </div>
     </div>
 </div>
 
