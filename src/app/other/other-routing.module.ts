@@ -12,6 +12,7 @@ import { AnimationComponent } from './animation/animation.component';
 import { BetterImportsComponent } from './better-imports/better-imports.component';
 import { LinksComponent } from './links/links.component';
 import { RatingBootstrapComponent } from './rating-bootstrap/rating-bootstrap.component';
+import { NgForAndCollectionsComponent } from './ng-for-and-collections/ng-for-and-collections.component';
 
 import { ResolveWithLoaderComponent, Step1Component, Step2Component } from './resolve-with-loader';
 
@@ -104,6 +105,10 @@ const routes: Routes = [
     {
         path: 'other/rating-bootstrap',
         component: RatingBootstrapComponent
+    },
+    {
+        path: 'other/ng-for-and-collections',
+        component: NgForAndCollectionsComponent
     },
     {
         path: 'other/resolve-with-loader',

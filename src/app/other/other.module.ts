@@ -17,6 +17,7 @@ import { BetterImportsComponent } from './better-imports/better-imports.componen
 import { ResolveWithLoaderComponent, Step1Component, Step2Component } from './resolve-with-loader';
 import { LinksComponent } from './links/links.component';
 import { RatingBootstrapComponent } from './rating-bootstrap/rating-bootstrap.component';
+import { NgForAndCollectionsComponent } from './ng-for-and-collections/ng-for-and-collections.component';
 
 @NgModule({
     imports: [
@@ -44,7 +45,8 @@ import { RatingBootstrapComponent } from './rating-bootstrap/rating-bootstrap.co
         Step2Component,
 
         LinksComponent,
-        RatingBootstrapComponent
+        RatingBootstrapComponent,
+        NgForAndCollectionsComponent
     ]
 })
 export class OtherModule { }
