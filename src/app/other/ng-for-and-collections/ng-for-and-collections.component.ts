@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
 import { filter } from 'rxjs/operators';
 
 interface Person {
@@ -9,7 +9,7 @@ interface Person {
 }
 
 interface PersonWithFriends extends Person {
-    friends: Person[]
+    friends: Person[];
 }
 
 interface Todo {
@@ -52,7 +52,7 @@ export class NgForAndCollectionsComponent implements OnInit {
                 }
             ]
         }
-    ]
+    ];
 
     todos: Todo[];
     getMoreTodos: Todo[];
@@ -77,7 +77,7 @@ export class NgForAndCollectionsComponent implements OnInit {
                     this.getMoreTodos = tenTodos;
                 },
                 e => console.log(e)
-            )
+            );
     }
 
     private getCollectionAndPopulateProperty() {
@@ -88,7 +88,7 @@ export class NgForAndCollectionsComponent implements OnInit {
                     this.todos = tenTodos;
                 },
                 e => console.log(e)
-            )
+            );
     }
 
     private getCollectionPopulatePropertyNotDefined() {
@@ -99,7 +99,7 @@ export class NgForAndCollectionsComponent implements OnInit {
                     this.todosPropertyNotDefined = { todos: tenTodos };
                 },
                 e => console.log(e)
-            )
+            );
     }
 
     private getCollectionAndReturnObservableForAsyncPipe() {
