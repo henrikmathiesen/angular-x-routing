@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbButtonsModule, NgbDatepickerModule, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -22,6 +23,7 @@ import { NgForAndCollectionsComponent } from './ng-for-and-collections/ng-for-an
 @NgModule({
     imports: [
         FormsModule,
+        HttpClientModule,
         BrowserAnimationsModule,
         NgbButtonsModule,
         NgbDatepickerModule,

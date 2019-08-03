@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 interface Person {
     name: string;
@@ -9,10 +10,15 @@ interface PersonWithFriends extends Person {
     friends: Person[]
 }
 
+interface Todo {
+    title: string;
+    id: number;
+}
+
 @Component({
     templateUrl: './ng-for-and-collections.component.html'
 })
-export class NgForAndCollectionsComponent {
+export class NgForAndCollectionsComponent implements OnInit {
     pageTitle = 'ngFor and collections';
 
     people: PersonWithFriends[] = [
@@ -45,4 +51,42 @@ export class NgForAndCollectionsComponent {
             ]
         }
     ]
+
+    todos: Todo[];
+    getMoreTodos: Todo[];
+
+    constructor(
+        private http: HttpClient
+    ) { }
+
+    ngOnInit() {
+        this.getCollectionAndPopulateProperty();
+    }
+
+    getTodos() { 
+        this.http.get('http://jsonplaceholder.typicode.com/todos')
+            .subscribe(
+                (v: Todo[]) => {
+                    const tenTodos = v.slice(0, 10);
+                    this.getMoreTodos = tenTodos;
+                },
+                e => console.log(e)
+            )
+    }
+
+    private getCollectionAndPopulateProperty() {
+        this.http.get('http://jsonplaceholder.typicode.com/todos')
+            .subscribe(
+                (v: Todo[]) => {
+                    const tenTodos = v.slice(0, 10);
+                    this.todos = tenTodos;
+                },
+                e => console.log(e)
+            )
+    }
+
+    private getCollectionAndReturnObservableForAsyncPipe() {
+
+    }
+
 }
