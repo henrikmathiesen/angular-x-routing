@@ -1,6 +1,27 @@
 <div class="row">
     <div class="col">
         <h2>{{ pageTitle }}</h2>
-        
+        <h3>Basic</h3>
+        <ngb-rating [(rate)]="basicCurrentRate"></ngb-rating>
+        <p>
+            Rate: <strong>{{ basicCurrentRate }}</strong>
+        </p>
+        <h3>Hearts, decimal</h3>
+        <ngb-rating [(rate)]="heartsCurrentRate" [starTemplate]="t" max="5"></ngb-rating>
+        <p>
+            Rate: <strong>{{ heartsCurrentRate }}</strong>
+        </p>
+        <p>
+            <input class="form-control" type="tel" [(ngModel)]="heartsRating">
+        </p>
+        <p>
+            <button class="btn btn-success" (click)="setHeartsRating()">Set rating</button>
+        </p>
     </div>
 </div>
+
+<ng-template #t let-fill="fill">
+    <span class="star" [class.full]="fill === 100">
+        <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
+    </span>
+</ng-template>
