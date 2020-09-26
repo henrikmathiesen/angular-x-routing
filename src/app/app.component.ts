@@ -7,6 +7,8 @@ import { UserModel } from 'app/user/user.model';
 import { AuthService } from 'app/core/auth.service';
 import { MessageService } from 'app/core/message.service';
 
+import { FooPipe } from 'app/shared/pipes/foo.pipe';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -20,7 +22,8 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(
     private router: Router,
     private authService: AuthService,
-    public messageService: MessageService
+    public messageService: MessageService,
+    private fooPipe: FooPipe
   ) {
   }
 
@@ -50,6 +53,8 @@ export class AppComponent implements OnInit, OnDestroy {
       });
 
     this.userSubscription = this.authService.user$.subscribe(user => this.user = user);
+
+    console.log(this.fooPipe.transform('pipe'));
   }
 
   ngOnDestroy() {
