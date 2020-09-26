@@ -5,6 +5,8 @@ import { Subscription } from 'rxjs/Subscription';
 import { ProductModel } from 'app/data/product.model';
 import { ProductService } from 'app/core/product.service';
 
+import { FooPipe } from 'app/shared/pipes/foo.pipe';
+
 @Component({
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.scss']
@@ -22,7 +24,8 @@ export class ProductListComponent implements OnInit, OnDestroy {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private productService: ProductService
+    private productService: ProductService,
+    private fooPipe: FooPipe
   ) { }
 
   toggleImage() {
@@ -30,6 +33,8 @@ export class ProductListComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    console.log(this.fooPipe.transform('pipe'));
+
     this.pageTitle = this.activatedRoute.snapshot.data['pageTitle']; // we never subscribe to data in route data property since it is always static
     this.productsSubscription = this.productService.getProducts().subscribe(p => this.products = p);
 

@@ -18,6 +18,9 @@ import { FooPipe } from './pipes/foo.pipe';
     StarComponent,
     TipsComponent,
     FooPipe
+  ],
+  providers: [
+    FooPipe
   ]
 })
 export class SharedModule { }
