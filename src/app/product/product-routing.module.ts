@@ -9,6 +9,34 @@ import { ProductResolverService } from 'app/core/product-resolver.service';
 // import { AuthGuardService } from 'app/core/auth-guard.service';
 import { ProductGuardService } from 'app/core/product-guard.service';
 
+
+
+/* 
+  INFO
+
+  //
+  // app-routing.module
+
+  const routes: Routes = [
+  
+  ];
+  RouterModule.forRoot(routes, { useHash: false })
+
+  //
+  // feature-module-routing.module
+
+  const routes: Routes = [
+      {
+          path: 'foo',
+          component: FooComponent
+      }
+  ];
+  RouterModule.forChild(routes)
+
+  'localhost:4200/foo' will hit FooComponent
+
+*/
+
 const routes: Routes = [
 
   // VERSION 3
